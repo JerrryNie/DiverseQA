@@ -195,9 +195,6 @@ def get_cloze_data_v2(input_data, span_type):
                     if each.find(answer) != -1:
                         question = each.replace(answer, 'PLACEHOLDER', 1)
                         break
-                else:
-                    question = sent[:ent.start_char] + \
-                        sent[ent.start_char:].replace(answer, entity_type_map[ent.label_], 1)
                 if not question:
                     continue
 
