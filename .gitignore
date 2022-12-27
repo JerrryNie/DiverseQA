@@ -1,0 +1,5 @@
+/data
+/output*
+*.zip
+/__pycache__
+/runs
