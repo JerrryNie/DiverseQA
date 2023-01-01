@@ -181,6 +181,8 @@ def get_cloze_data_v2(input_data, span_type):
 
         for sent_idx, sent in enumerate(item['summary']):
             spans = get_answer_by_type(sentence=sent, span_type=span_type)
+            if spans is None:
+                continue
             try:
                 clause = get_clause_v2(sent, parser)
             except Exception as e:
